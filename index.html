@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta Exclusiva - Ateliê Paetês</title>
+    <title>Sua Nova Marca - Ateliê Paetês</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Italiana&family=Manrope:wght@200;400;600&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -16,333 +16,274 @@
                 extend: {
                     colors: {
                         gold: {
-                            100: '#FBF5D4', // Champanhe
-                            200: '#F2E2A6',
-                            300: '#D4AF37', // Ouro Puro
-                            400: '#C59D2E',
-                            500: '#997B29', // Ouro Envelhecido
-                            600: '#755C1B',
-                            700: '#544213',
+                            light: '#F5E6C4',
+                            base: '#D4AF37', 
+                            dark: '#8A6E24',
                         },
-                        rich: {
-                            900: '#050505', // Preto Absoluto
-                            800: '#0a0a0a', // Preto Carvão
-                            700: '#121212', // Cinza Onix
+                        obsidian: {
+                            900: '#050505',
+                            800: '#0F0F0F',
+                            card: '#141414'
                         }
                     },
                     fontFamily: {
-                        display: ['"Cinzel"', 'serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Montserrat"', 'sans-serif'],
+                        display: ['"Italiana"', 'serif'],
+                        serif: ['"Cinzel"', 'serif'],
+                        sans: ['"Manrope"', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'radial-spotlight': 'radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, rgba(5, 5, 5, 0) 70%)',
-                        'metallic-gold': 'linear-gradient(to bottom right, #FBF5D4 0%, #D4AF37 50%, #997B29 100%)',
-                        'glass': 'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)',
+                        'luxury-gradient': 'linear-gradient(to bottom, #050505 0%, #121212 100%)',
+                        'gold-foil': 'linear-gradient(45deg, #8A6E24 0%, #D4AF37 40%, #F5E6C4 50%, #D4AF37 60%, #8A6E24 100%)',
+                        'glass-dark': 'rgba(20, 20, 20, 0.7)',
                     },
                     boxShadow: {
-                        'gold-glow': '0 0 30px -5px rgba(212, 175, 55, 0.25)',
-                        'inner-light': 'inset 0 1px 1px rgba(255, 255, 255, 0.1)',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'shimmer': 'shimmer 2.5s infinite linear',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(100%)' },
-                        }
+                        'gold-subtle': '0 10px 40px -10px rgba(212, 175, 55, 0.15)',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Tipografia de Luxo */
-        .tracking-widest-luxury { letter-spacing: 0.25em; }
-        
-        /* Gradiente de Texto Metálico Realista */
-        .text-gold-metallic {
-            background: linear-gradient(to bottom, #FBF5D4 0%, #D4AF37 40%, #997B29 100%);
+        /* Efeito de Texto Dourado Realista */
+        .text-gold-leaf {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
         }
 
-        /* Borda Dourada Elegante */
-        .border-gold-gradient {
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* Borda Dourada Fina */
+        .border-thin-gold {
             border: 1px solid transparent;
-            background: linear-gradient(to right, #0a0a0a, #0a0a0a) padding-box,
-                        linear-gradient(to bottom right, #997B29, #FBF5D4, #997B29) border-box;
+            background: linear-gradient(#0F0F0F, #0F0F0F) padding-box,
+                        linear-gradient(45deg, #8A6E24, #F5E6C4, #8A6E24) border-box;
         }
 
-        /* Efeito de Vidro */
-        .glass-panel {
-            background: rgba(18, 18, 18, 0.6);
+        /* Glassmorphism Puro */
+        .glass-blur {
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(10, 10, 10, 0.85);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        /* Botão com brilho passando */
-        .btn-shimmer {
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-shimmer::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
-            transform: translateX(-100%);
-            animation: shimmer 3s infinite;
+        .hero-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
-<body class="bg-rich-900 text-gray-300 font-sans antialiased pb-28 selection:bg-gold-500 selection:text-white">
+<body class="bg-obsidian-900 text-gray-300 font-sans antialiased overflow-x-hidden pb-32">
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
-        <!-- Ambient Light -->
-        <div class="absolute inset-0 bg-radial-spotlight pointer-events-none"></div>
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-gold-600/10 rounded-full blur-[120px]"></div>
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 hero-pattern">
         
-        <!-- Tagline -->
-        <div class="relative z-10 mb-6 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
-            <p class="text-gold-300 text-[10px] md:text-xs font-semibold tracking-widest-luxury uppercase border-b border-gold-500/30 pb-2 inline-block">
-                Confidencial &bull; Jackeline Jardim
+        <!-- Top Label -->
+        <div class="absolute top-10 animate-[fadeIn_1s_ease-out]">
+            <span class="text-[10px] tracking-[0.4em] uppercase text-gray-500 border-b border-gray-800 pb-2">
+                Ateliê Paetês &bull; Identidade Visual
+            </span>
+        </div>
+
+        <!-- Main Headline -->
+        <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+            <h1 class="text-5xl md:text-7xl font-display text-white leading-[1.1] opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards]">
+                Sua marca <br/>
+                <span class="text-gold-leaf italic pr-2">inesquecível.</span>
+            </h1>
+            
+            <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-md mx-auto opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards]">
+                Transformamos a essência do seu ateliê em um símbolo visual de poder, luxo e desejo. O design está pronto e aguardando revelação.
             </p>
         </div>
-        
-        <!-- Headline -->
-        <h1 class="relative z-10 text-4xl md:text-6xl font-display text-white mb-4 leading-tight opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
-            Sua Marca <br>
-            <span class="text-gold-metallic italic font-serif">Redefinida.</span>
-        </h1>
-        
-        <p class="relative z-10 text-gray-400 max-w-md mx-auto mb-12 text-sm md:text-base font-light leading-relaxed opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
-            Unimos a precisão do ateliê com o glamour dos paetês. O resultado é uma joia visual pronta para elevar seu negócio.
-        </p>
 
-        <!-- THE MYSTERY BOX (LUXURY VAULT) -->
-        <div class="relative z-10 group cursor-pointer opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]">
-            <!-- Glow Rings -->
-            <div class="absolute inset-0 bg-gold-400/20 rounded-full blur-2xl animate-pulse"></div>
-            
-            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-gold-gradient glass-panel flex flex-col items-center justify-center shadow-gold-glow transform transition-all duration-700 group-hover:scale-[1.02]">
+        <!-- THE MYSTERY ENVELOPE (Interação Principal) -->
+        <div class="mt-16 relative group cursor-pointer opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards]">
+            <!-- Envelope Body -->
+            <div class="relative w-72 h-48 bg-obsidian-card border-thin-gold rounded-lg shadow-gold-subtle flex flex-col items-center justify-center transform transition-transform duration-500 group-hover:-translate-y-2">
                 
-                <!-- Lock Icon with Metallic Gradient -->
-                <div class="mb-4 animate-float">
-                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-rich-800 to-rich-900 border border-gold-500/50 flex items-center justify-center shadow-inner-light">
-                        <i class="fas fa-lock text-3xl text-gold-metallic"></i>
-                    </div>
+                <!-- Seal -->
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gold-dark to-gold-base shadow-lg flex items-center justify-center mb-3 relative z-20 border-4 border-obsidian-800">
+                    <i class="fas fa-lock text-obsidian-900 text-lg"></i>
                 </div>
-
-                <h3 class="font-display text-lg text-white tracking-widest uppercase mb-1">Conceito</h3>
-                <h2 class="font-serif text-2xl text-gold-300 italic">"Ponto de Luz"</h2>
                 
-                <!-- Security Status -->
-                <div class="mt-4 flex items-center gap-2 px-3 py-1 rounded-full bg-rich-900/80 border border-white/5">
-                    <div class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_5px_#22c55e]"></div>
-                    <span class="text-[10px] uppercase tracking-wide text-gray-400">Arquivo Protegido</span>
-                </div>
+                <h3 class="font-serif text-gold-light text-sm tracking-widest uppercase mt-2">Arquivo Confidencial</h3>
+                <p class="text-[10px] text-gray-500 mt-1">Clique para ver detalhes</p>
+                
+                <!-- Glow Effect behind -->
+                <div class="absolute -inset-4 bg-gold-base/10 blur-2xl -z-10 rounded-full opacity-50 group-hover:opacity-80 transition-opacity"></div>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-32 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce">
-            <span class="text-[10px] uppercase tracking-widest text-gold-400">Descubra</span>
-            <div class="w-[1px] h-12 bg-gradient-to-b from-gold-400 to-transparent"></div>
+        <!-- Scroll Down -->
+        <div class="absolute bottom-28 md:bottom-12 flex flex-col items-center gap-3 opacity-50 animate-pulse">
+            <div class="w-[1px] h-16 bg-gradient-to-b from-transparent via-gold-base to-transparent"></div>
+            <span class="text-[9px] uppercase tracking-widest text-gold-base">Detalhes</span>
         </div>
     </header>
 
-    <!-- SECTION: THE GAP (BEFORE VS AFTER) -->
-    <section class="relative px-6 py-20 bg-rich-900 border-t border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-2xl md:text-3xl font-serif text-white mb-4">A Diferença Visual</h2>
-                <div class="w-16 h-0.5 bg-gold-500 mx-auto"></div>
+    <!-- SECTION: PERCEPTION (Psychology) -->
+    <section class="py-20 px-6 bg-obsidian-800 border-t border-white/5 relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gold-base/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="font-display text-3xl md:text-4xl text-white">
+                    Posicionamento é <br> <span class="text-gold-base italic">tudo.</span>
+                </h2>
+                <div class="w-12 h-[1px] bg-gold-base"></div>
+                <p class="text-sm text-gray-400 leading-7 font-light text-justify">
+                    Jackeline, suas peças já possuem qualidade. O que falta é a embalagem visual que grita "exclusividade". 
+                    <br><br>
+                    Clientes de alto padrão não compram apenas o produto, compram a marca. A nova identidade do <strong>Ateliê Paetês</strong> foi desenhada para eliminar a negociação de preço e criar desejo imediato.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-center relative">
-                <!-- Divider for Desktop -->
-                <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-rich-800 border border-gold-500/30 items-center justify-center z-10">
-                    <span class="text-gold-400 text-xs font-bold">VS</span>
-                </div>
-
-                <!-- CARD 1: CURRENT STATE -->
-                <div class="p-8 rounded-2xl bg-rich-800/50 border border-white/5 text-center grayscale opacity-70 hover:opacity-100 transition-opacity duration-500">
-                    <div class="mb-4 text-gray-500">
-                        <i class="fas fa-cut text-4xl"></i>
+            <!-- Visual Comparison -->
+            <div class="bg-obsidian-900 p-8 border border-white/5 rounded-sm relative">
+                <div class="absolute top-4 right-4 text-gold-base text-xs border border-gold-base/30 px-2 py-1 uppercase tracking-wider">Novo Padrão</div>
+                
+                <div class="space-y-6 mt-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-xs uppercase tracking-wide">Sem identidade forte</p>
+                            <p class="text-gray-400 font-serif text-sm">"Quanto custa? Faz desconto?"</p>
+                        </div>
                     </div>
-                    <h3 class="text-gray-400 font-display text-sm uppercase tracking-widest mb-2">Cenário Atual</h3>
-                    <p class="text-lg font-serif text-gray-300 mb-4">"Costureira Talentosa"</p>
-                    <ul class="text-sm text-gray-500 space-y-2 font-light">
-                        <li>&bull; Cliente pede desconto</li>
-                        <li>&bull; Comparação por preço</li>
-                        <li>&bull; Visual amador</li>
-                    </ul>
-                </div>
-
-                <!-- CARD 2: FUTURE STATE -->
-                <div class="relative p-8 rounded-2xl border-gold-gradient glass-panel text-center shadow-gold-glow transform scale-105">
-                    <!-- Shine Effect -->
-                    <div class="absolute top-0 right-0 -mt-2 -mr-2 w-20 h-20 bg-gold-400/20 blur-2xl rounded-full"></div>
                     
-                    <div class="mb-4 text-gold-metallic">
-                        <i class="fas fa-crown text-4xl"></i>
+                    <div class="w-full h-[1px] bg-white/5"></div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gold-base/20 flex items-center justify-center text-gold-base shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-gold-base text-xs uppercase tracking-wide font-bold">Com a nova marca</p>
+                            <p class="text-white font-serif text-lg">"Eu quero exclusividade."</p>
+                        </div>
                     </div>
-                    <h3 class="text-gold-400 font-display text-sm uppercase tracking-widest mb-2">Nova Identidade</h3>
-                    <p class="text-xl font-serif text-white mb-4">"Ateliê de Luxo"</p>
-                    <ul class="text-sm text-gray-300 space-y-2 font-light">
-                        <li class="flex justify-center items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Cliente deseja exclusividade</li>
-                        <li class="flex justify-center items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Valorização do trabalho manual</li>
-                        <li class="flex justify-center items-center gap-2"><i class="fas fa-check text-gold-500 text-xs"></i> Autoridade imediata</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: THE DELIVERABLES (THE STACK) -->
-    <section class="px-6 py-20 bg-rich-800/30">
+    <!-- SECTION: DELIVERABLES (The Stack) -->
+    <section class="py-20 px-6 bg-obsidian-900">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl font-serif text-white mb-10 text-center">O Arsenal da Sua Marca <span class="text-gold-400">*</span></h2>
+            <div class="text-center mb-12">
+                <span class="text-gold-base text-xs tracking-[0.2em] uppercase">O que está incluso</span>
+                <h2 class="font-display text-3xl text-white mt-2">Seu Arsenal de Marca</h2>
+            </div>
+
+            <div class="grid gap-4">
+                <!-- Card 1 -->
+                <div class="p-6 bg-obsidian-card border border-white/5 hover:border-gold-base/30 transition-colors flex items-start gap-4 group">
+                    <i class="fas fa-gem text-gold-base mt-1 group-hover:scale-110 transition-transform"></i>
+                    <div>
+                        <h3 class="text-white font-serif text-lg">Logomarca Master "Ponto de Luz"</h3>
+                        <p class="text-gray-500 text-xs mt-1 font-light leading-relaxed">Design exclusivo unindo sofisticação e conceito. Arquivos em alta resolução (PNG, PDF) prontos para uso.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 bg-obsidian-card border border-white/5 hover:border-gold-base/30 transition-colors flex items-start gap-4 group">
+                    <i class="fab fa-instagram text-gold-base mt-1 group-hover:scale-110 transition-transform"></i>
+                    <div>
+                        <h3 class="text-white font-serif text-lg">Ícone Social Premium</h3>
+                        <p class="text-gray-500 text-xs mt-1 font-light leading-relaxed">Adaptação perfeita para foto de perfil do Instagram e WhatsApp. Legibilidade e impacto em telas pequenas.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 bg-gradient-to-r from-obsidian-card to-[#1a1a1a] border border-gold-base/20 flex items-start gap-4 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 bg-gold-base text-obsidian-900 text-[9px] font-bold px-2 py-1 uppercase">Bônus</div>
+                    <i class="fas fa-shield-alt text-gold-base mt-1"></i>
+                    <div>
+                        <h3 class="text-white font-serif text-lg">Marca D'água Anti-Cópia</h3>
+                        <p class="text-gray-500 text-xs mt-1 font-light leading-relaxed">Proteja suas criações. Receba sua logo com fundo transparente para aplicar sobre fotos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: OFFER (Pricing) -->
+    <section class="py-24 px-6 relative text-center">
+        <!-- Background radial spotlight -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold-dark/10 via-obsidian-900 to-obsidian-900 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-sm mx-auto">
+            <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-6">Investimento Único</p>
+            
+            <div class="text-5xl md:text-6xl font-display text-white mb-2">
+                <span class="text-2xl align-top text-gray-500 font-sans font-light">3x</span> 50<span class="text-2xl text-gold-base">,00</span>
+            </div>
+            <p class="text-gray-400 font-light text-sm mb-8">ou R$ 150,00 à vista</p>
 
             <div class="space-y-4">
-                <!-- Item 1 -->
-                <div class="group flex items-center p-5 rounded-xl border border-white/5 bg-rich-800 hover:border-gold-500/50 hover:bg-rich-800/80 transition-all duration-300 cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-900/20 border border-gold-500/20 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <div class="ml-5">
-                        <h3 class="text-white font-serif text-lg">Logomarca Principal</h3>
-                        <p class="text-xs text-gray-400 mt-1 font-light">Arquivos vetoriais em alta definição (PDF, PNG). O "Ponto de Luz" em sua máxima resolução.</p>
-                    </div>
-                </div>
+                <p class="text-xs text-gray-500 max-w-xs mx-auto leading-relaxed">
+                    Valor promocional de lançamento. O preço retornará para R$ 750,00 após 24 horas.
+                </p>
 
-                <!-- Item 2 -->
-                <div class="group flex items-center p-5 rounded-xl border border-white/5 bg-rich-800 hover:border-gold-500/50 hover:bg-rich-800/80 transition-all duration-300 cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-900/20 border border-gold-500/20 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="ml-5">
-                        <h3 class="text-white font-serif text-lg">Submark (Ícone Social)</h3>
-                        <p class="text-xs text-gray-400 mt-1 font-light">Versão otimizada para legibilidade perfeita na foto de perfil do Instagram e WhatsApp.</p>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="group flex items-center p-5 rounded-xl border border-white/5 bg-rich-800 hover:border-gold-500/50 hover:bg-rich-800/80 transition-all duration-300 cursor-default">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-900/20 border border-gold-500/20 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-swatchbook"></i>
-                    </div>
-                    <div class="ml-5">
-                        <h3 class="text-white font-serif text-lg">Manual da Marca (Mini)</h3>
-                        <p class="text-xs text-gray-400 mt-1 font-light">Códigos HEX do Dourado e Preto e tipografias para manter consistência em seus posts.</p>
-                    </div>
-                </div>
-
-                <!-- BONUS -->
-                <div class="mt-8 relative overflow-hidden rounded-xl border border-gold-500/30">
-                    <div class="absolute inset-0 bg-gold-500/10"></div>
-                    <div class="relative p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-                        <div>
-                            <span class="text-[10px] font-bold text-gold-400 uppercase tracking-widest border border-gold-500/30 px-2 py-1 rounded mb-2 inline-block">Bônus Exclusivo</span>
-                            <h3 class="text-white font-serif text-xl">Marca D'água Anti-Cópia</h3>
-                            <p class="text-xs text-gray-400 mt-1">Proteja suas fotos de produtos com sua logo transparente.</p>
-                        </div>
-                        <div class="text-gold-metallic font-display text-2xl font-bold">GRÁTIS</div>
-                    </div>
-                </div>
+                <button onclick="document.getElementById('payment-modal').classList.remove('hidden')" class="w-full bg-gold-foil text-obsidian-900 font-bold py-4 px-8 uppercase tracking-widest text-xs hover:shadow-gold-subtle hover:scale-[1.02] transition-all duration-300">
+                    Destrancar Arquivos
+                </button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION: THE OFFER (ANCHORING) -->
-        <section class="px-6 py-20 bg-gradient-to-b from-rich-900 to-black">
-            <div class="max-w-md mx-auto text-center">
-                <p class="text-gray-500 text-xs uppercase tracking-widest mb-3">Investimento Único</p>
-                
-                <div class="relative rounded-3xl p-[1px] bg-gradient-to-b from-gold-500 to-rich-900 shadow-2xl">
-                    <div class="bg-rich-900 rounded-[23px] p-8 md:p-10 relative overflow-hidden">
-                        
-                        <!-- Header Card -->
-                        <h3 class="text-2xl font-serif text-white mb-2">Identidade Visual Completa</h3>
-                        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-gold-500/50 to-transparent my-6"></div>
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 px-6 text-center border-t border-white/5">
+        <h4 class="font-display text-gold-base text-xl mb-2">Ateliê Paetês</h4>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 Design Studio. All Rights Reserved.</p>
+    </footer>
 
-                        <!-- Price -->
-                        <div class="mb-6">
-                            <span class="block text-gray-500 line-through text-sm mb-1">R$ 750,00</span>
-                            <div class="flex items-baseline justify-center gap-2 text-white">
-                                <span class="text-2xl font-light text-gray-400">3x</span>
-                                <span class="text-6xl md:text-7xl font-display font-bold text-gold-metallic">50</span>
-                            </div>
-                            <p class="text-gold-200/80 text-sm font-light mt-2">ou R$ 150 à vista</p>
-                        </div>
-
-                        <!-- CTA -->
-                        <button onclick="document.getElementById('payment-modal').classList.remove('hidden')" class="btn-shimmer w-full bg-metallic-gold text-rich-900 font-bold py-4 rounded-lg uppercase tracking-wider text-sm shadow-gold-glow hover:scale-[1.02] transition-transform duration-300 mb-6">
-                            Destrancar Minha Marca
-                        </button>
-
-                        <p class="text-[10px] text-gray-500 leading-relaxed">
-                            Ao clicar, você garante o valor promocional. A entrega dos arquivos é feita imediatamente após a confirmação.
-                        </p>
-                    </div>
-                </div>
+    <!-- STICKY MOBILE BAR (GLASS) -->
+    <div class="fixed bottom-0 left-0 w-full z-50 md:hidden">
+        <div class="glass-blur p-4 flex items-center justify-between">
+            <div class="text-left">
+                <p class="text-[10px] text-gray-400 uppercase">Total</p>
+                <p class="text-gold-base font-bold text-lg leading-none">3x 50,00</p>
             </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="text-center py-10 px-6 border-t border-white/5 bg-black">
-            <p class="font-serif text-gold-500 text-lg mb-2">Ateliê Paetês</p>
-            <p class="text-gray-600 text-[10px] uppercase tracking-widest">© 2026 Design Studio. Todos os direitos reservados.</p>
-        </footer>
-
-        <!-- STICKY MOBILE CTA (GLASSMORPHISM) -->
-        <div class="fixed bottom-0 left-0 w-full p-4 md:hidden z-50">
-            <div class="absolute inset-0 bg-rich-900/90 backdrop-blur-md border-t border-gold-500/20"></div>
-            <button onclick="document.getElementById('payment-modal').classList.remove('hidden')" class="btn-shimmer relative w-full bg-metallic-gold text-rich-900 font-bold py-3.5 rounded shadow-lg uppercase text-xs tracking-widest flex items-center justify-center gap-2">
-                <i class="fas fa-lock-open"></i> Liberar Acesso (3x R$ 50)
+            <button onclick="document.getElementById('payment-modal').classList.remove('hidden')" class="bg-gold-base text-obsidian-900 font-bold py-3 px-6 text-xs uppercase tracking-wider rounded-sm shadow-lg">
+                Liberar Agora
             </button>
         </div>
+    </div>
 
-        <!-- MODAL (OVERLAY) -->
-        <div id="payment-modal" class="fixed inset-0 z-[100] hidden">
-            <!-- Backdrop -->
-            <div class="absolute inset-0 bg-black/90 backdrop-blur-sm transition-opacity" onclick="document.getElementById('payment-modal').classList.add('hidden')"></div>
-            
-            <!-- Modal Content -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-sm bg-rich-800 border border-gold-500/30 rounded-2xl p-6 shadow-2xl">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/20">
-                        <i class="fab fa-whatsapp text-3xl text-green-500"></i>
-                    </div>
-                    <h3 class="text-xl font-serif text-white mb-2">Excelente Escolha!</h3>
-                    <p class="text-sm text-gray-400 font-light mb-6">
-                        Estamos prontos para te enviar o "Ponto de Luz". Finalize pelo WhatsApp para receber os arquivos e o bônus agora mesmo.
-                    </p>
-                    
-                    <a href="https://wa.me/?text=Olá,%20quero%20destrancar%20minha%20nova%20identidade%20visual%20Ateliê%20Paetês%20por%203x%20de%2050." class="block w-full bg-[#25D366] hover:bg-[#1eab52] text-white font-bold py-3.5 rounded-lg mb-3 transition-colors shadow-lg shadow-green-900/20">
-                        Finalizar no WhatsApp
-                    </a>
-                    
-                    <button onclick="document.getElementById('payment-modal').classList.add('hidden')" class="text-xs text-gray-500 hover:text-white underline underline-offset-4">
-                        Cancelar e perder oferta
-                    </button>
-                </div>
+    <!-- MODAL (CHECKOUT) -->
+    <div id="payment-modal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-black/95 backdrop-blur-sm transition-opacity" onclick="document.getElementById('payment-modal').classList.add('hidden')"></div>
+        
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-sm bg-obsidian-card border border-gold-base/30 p-8 shadow-2xl">
+            <div class="text-center">
+                <h3 class="font-display text-2xl text-white mb-2">Excelente Escolha</h3>
+                <div class="w-8 h-[1px] bg-gold-base mx-auto mb-6"></div>
+                
+                <p class="text-sm text-gray-400 font-light mb-8 leading-relaxed">
+                    Para garantir a segurança da transação e entrega imediata dos arquivos, finalizaremos pelo WhatsApp.
+                </p>
+                
+                <a href="https://wa.me/5577991688329?text=Olá,%20gostaria%20de%20finalizar%20o%20pacote%20da%20Identidade%20Visual%20Premium%20por%203x%20de%2050." class="block w-full bg-[#25D366] text-white font-bold py-4 text-xs uppercase tracking-widest hover:bg-[#20bd5a] transition-colors mb-4">
+                    <i class="fab fa-whatsapp text-lg align-middle mr-2"></i> Confirmar no WhatsApp
+                </a>
+                
+                <button onclick="document.getElementById('payment-modal').classList.add('hidden')" class="text-[10px] text-gray-600 uppercase tracking-widest hover:text-white transition-colors">
+                    Voltar
+                </button>
             </div>
         </div>
+    </div>
 
 </body>
 </html>
